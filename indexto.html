@@ -84,7 +84,7 @@
     </div>
 
     <div id="taskList">
-      <!-- User tasks will be displayed here -->
+    
     </div>
   </div>
 
@@ -98,28 +98,21 @@
         return;
       }
 
-      // Create task container
       const taskDiv = document.createElement("div");
       taskDiv.className = "task";
 
-      // Add task text
       const taskSpan = document.createElement("span");
       taskSpan.textContent = taskText;
 
-      // Add delete button
       const delBtn = document.createElement("button");
       delBtn.textContent = "Delete";
       delBtn.className = "delete-btn";
       delBtn.onclick = () => taskDiv.remove();
 
-      // Append span + button to task div
       taskDiv.appendChild(taskSpan);
       taskDiv.appendChild(delBtn);
 
-      // Add task to the list
       document.getElementById("taskList").appendChild(taskDiv);
-
-      // Clear input
       taskInput.value = "";
     }
   </script>
